@@ -48,18 +48,11 @@ def SortArrayPair(numberArray, indexArray):
                 numberArray[j], numberArray[j+1] = numberArray[j+1], numberArray[j]
     return numberArray, indexArray
 
-def BubbleSort(array):
-    for i in range (len(array)):
-        for j in range (0, n - i -1):
-            if array[j] > array[j+1]:
-                array[j], array[j+1] = array[j+1], array[j]
-
 def ProcessLine(line):
     global sum
     strippedLine = line.strip()
     numberArray = []
     indexArray = []
-    result =[]
 
     result = [(char, index) for index, char in enumerate(strippedLine) if char.isdigit()]
 
