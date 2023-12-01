@@ -64,13 +64,13 @@ def ProcessLine(line):
     
     if len(sortedNumberArray) == 1:
         newNumber = int((sortedNumberArray[0]) + (sortedNumberArray[0]))
-        sum += newNumber
 
     elif len(numberArray) > 1:
         firstNumber = sortedNumberArray[0]
         lastNumber = sortedNumberArray[-1]
         newNumber = int((firstNumber) + (lastNumber))
-        sum += newNumber
+    
+    sum += newNumber
 
 if __name__ == "__main__":
     ReadInputText()
