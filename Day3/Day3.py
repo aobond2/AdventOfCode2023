@@ -17,12 +17,17 @@ def ReadInputText():
     with open(input, 'r') as file:
         for line in file:
             line = line.strip()
-            #na = checkNonAlphaNumeric(line)
-            checkNumeric(line)
+            na = checkNonAlphaNumeric(line)
+            x = checkNumeric(line)
+            print (na)
 
 def checkNonAlphaNumeric(string):
     matches = re.findall(r"[^\w\d\.]", string)
-    return matches
+    result = []
+    for match in matches:
+        index = string.find(match)
+        result.append((match, index))
+    return result
 
 def checkNumeric(string):
     result = []
@@ -39,7 +44,7 @@ def checkNumeric(string):
                 result.append(combinedTuple)
                 numbersList = []
                 orderList = []
-    print(result)
+    return result
 
 if __name__ == "__main__":
     ReadInputText()
